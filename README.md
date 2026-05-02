@@ -7,3 +7,4 @@ originally made out of frustration for [GTAdhocToolchain](https://github.com/Nen
 | ------ | ------ | ------ | ------ |
 | GPB rev 2 | format to pack files (mainly menu assets) for GT3 / partially GT4 | "GPB2"/"2BPG" | unpack, pack planned
 | GPB rev 3 | format to pack files (mainly menu assets) for GT4 / GT5 / GT6 | "GPB3"/"3BPG" | unpack, pack planned
+
