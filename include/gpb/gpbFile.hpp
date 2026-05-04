@@ -1,3 +1,4 @@
+#pragma once
 #include <string>
 namespace libgranturismo {
 	/// @brief represents a file in a gpb

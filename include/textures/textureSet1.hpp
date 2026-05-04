@@ -1,4 +1,6 @@
+#pragma once
 #include <textures/ps2TextureBase.hpp>
+#include <textures/pgluTexture.hpp>
 #include <util/common.hpp>
 namespace libgranturismo {
 	class textureSet1 : public ps2TextureBase {

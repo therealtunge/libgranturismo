@@ -1,3 +1,4 @@
+#pragma once
 /// @file include this to get all the libgt includes :)
 #include <gpb/gpb2.hpp>
 #include <gpb/gpb3.hpp>

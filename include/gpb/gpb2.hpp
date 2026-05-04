@@ -1,3 +1,4 @@
+#pragma once
 #include <gpb/gpbBase.hpp>
 #include <util/streams.hpp>
 #define GPB2_HEADERSIZE 0x10
@@ -15,5 +16,8 @@ namespace libgranturismo {
 		/// @param filename name of the file to read from
 		/// @param endian endianness of the format, 0 for little, 1 for big
 		int read(std::string filename, int endian) override;
+		int read(std::string filename) override;
+		void write(std::string filename, int endian) override;
+		void write(std::string filename) override;
 	};
 }
