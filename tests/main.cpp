@@ -94,23 +94,12 @@ void print_stats() {
 
 int main(int argc, char **argv)
 {
-	//TEST(gpb2_unpack, "gpbv2 unpacking");
-	//TEST(gpb2_pack, "gpbv2 packing");
+	TEST(gpb2_unpack, "gpbv2 unpacking");
+	TEST(gpb2_pack, "gpbv2 packing");
 	// no need for gpb2 validity check, test_assets/temp/gpb2_test.gpb loads in GT4 (loads = doesnt crash the game) but i cant test loading files off it
-	//TEST(gpb3_unpack, "gpbv3 unpacking");
-	//TEST(gpb3_pack, "gpbv3 packing");
+	TEST(gpb3_unpack, "gpbv3 unpacking");
+	TEST(gpb3_pack, "gpbv3 packing");
 	// no need for gpb3 validity check, test_assets/temp/gpb3_test.gpb loads in GT4 (loads = doesnt crash the game) but i cant test loading files off it
-	std::cout << std::filesystem::current_path() << std::endl;
-	std::ifstream st("/home/behrad/Desktop/vol_extracted/loading.img");
-	auto t = new libgranturismo::textureSet1();
-	t->read(&st);
-	print_stats();
-	uint32_t crc = 0xFFFFFFFF;
-	std::ifstream f("test_assets/temp/gpb3_test.gpb");
-	std::noskipws(f);
-	std::istream_iterator<uint8_t> head(f), tail;
-	crc = crc32<IEEE8023_CRC32_POLYNOMIAL>(crc, head, tail);
-
 	std::cout << std::hex;
 	std::cout << std::showbase;
 	std::cout << std::setw(8);

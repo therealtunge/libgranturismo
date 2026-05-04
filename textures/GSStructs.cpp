@@ -37,5 +37,4 @@ void sceGsTex0::read(std::ifstream *stream, unsigned int bitoff) {
 	CSM_ClutStorageMode = s.csm;
 	CSA_ClutEntryOffset = s.csa;
 	CLD_ClutBufferLoadControl = s.cld;
-	printf("baby time %d %d %d\n", s.tbp0, s.tbw, s.psm);
 }

@@ -62,7 +62,7 @@ namespace libgranturismo {
 				return g;
 			}
 			default: {
-				std::cout << "null" << std::hex << m << std::endl;
+				std::cout << "warn: unable to detect gpb type" << std::hex << m << std::endl;
 				return nullptr;
 			}
 		}
