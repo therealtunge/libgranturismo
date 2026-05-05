@@ -1,5 +1,8 @@
 // implementation of textureset1 (or Tex1)
 #include <textures/textureSet1.hpp>
+#include <textures/bitmap.hpp>
+
+
 using namespace libgranturismo;
 
 int textureSet1::read(std::ifstream *s) {
@@ -30,5 +33,16 @@ int textureSet1::read(std::ifstream *s) {
 		t->read(s);
 		pgluTextures.push_back(t);
 	}
+	for (int i = 0; i < transferCount; i++) {
+		auto g = new GSTransfer();
+		s->seekg(base_position + transferInfosOff + (i * 12)); // 12 = sizeof(GSTransfer)
+		g->read(s);
+		GSTransfers.push_back(g);
+	}
+	initGSmem();
+	auto t = GSTransfers[0];
+	auto d = new uint32_t[t->width * t->height];
+	GSMemory::readPSMCT32tex(gsMemory, pgluTextures[0]->tex0->TBP0_TextureBaseAddress, pgluTextures[0]->tex0->TBW_TextureBufferWidth, 0, 0, t->width, t->height, d);
+	writeBMP(d, t->width, t->height, "test_assets/test.bmp");
 	return 0;
 }

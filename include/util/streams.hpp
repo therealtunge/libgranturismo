@@ -16,6 +16,7 @@ namespace libgranturismo {
 		/// @details set `util::endian` to define the current endianness and the function will comply automatically
 		/// @param i the stream to read from
 		uint16_t readUint16(std::ifstream *i);
+		uint8_t readUint8(std::ifstream *i);
 		/// @brief read a null-terminated from an ifstream
 		/// @param i the stream to read from
 		/// @return the read string

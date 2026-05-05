@@ -2,6 +2,8 @@
 ## a C++ library to work with custom format developed by Polyphony Digital for Gran Turismo games
 originally made out of frustration for [GTAdhocToolchain](https://github.com/Nenkai/GTAdhocToolchain) not having an option to not convert textures into .png (i then realized it did have one but it was too late)
 
+please ignore the texture code its all violently borked like wtf
+
 # features
 | name of file format | description | magic | support |
 | ------ | ------ | ------ | ------ |

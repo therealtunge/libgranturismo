@@ -20,6 +20,12 @@ namespace libgranturismo {
 			i->read((char*)&t, 2);
 			return normalize16(t);
 		}
+		// read a uint8
+		uint8_t readUint8(std::ifstream *i) {
+			uint8_t t;
+			i->read((char*)&t, 1);
+			return t;
+		}
 		
 		// read a null-terminated string
 		std::string readString(std::ifstream *i) {
